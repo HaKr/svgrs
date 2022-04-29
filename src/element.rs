@@ -48,6 +48,17 @@ pub enum LengthOrPercentage {
     Percentage(f32),
 }
 
+impl LengthOrPercentage {
+    pub const ZERO: LengthOrPercentage = LengthOrPercentage::Number(0);
+    pub const HUNDRED_PERCENT: LengthOrPercentage = LengthOrPercentage::Percentage(100.0);
+    pub const ONE_QUARTER: LengthOrPercentage = LengthOrPercentage::Percentage(25.0);
+    pub const ONE_THIRD: LengthOrPercentage = LengthOrPercentage::Percentage(33.3333);
+    pub const TWO_THIRD: LengthOrPercentage = LengthOrPercentage::Percentage(66.6667);
+    pub const HALF: LengthOrPercentage = LengthOrPercentage::Percentage(50.0);
+    pub const THREE_QUARTER: LengthOrPercentage = LengthOrPercentage::Percentage(75.0);
+    pub const TEN_PERCENT: LengthOrPercentage = LengthOrPercentage::Percentage(10.0);
+}
+
 impl Display for LengthOrPercentage {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {

@@ -42,9 +42,9 @@ fn create_line() -> TestResult {
 
 fn create_text() -> TestResult {
     let toe = Text::new(
-        LengthOrPercentage::Number(20),
-        LengthOrPercentage::Number(30),
-        "My cat is Grumpy!"
+        LengthOrPercentage::HALF,
+        LengthOrPercentage::ONE_THIRD,
+        "My cat is Grumpy!",
     )
     .id("grumpy-cat")
     .add_class("heavy")
